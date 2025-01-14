@@ -2,10 +2,17 @@ import React, { useState, useEffect } from "react";
 import "./style.css";
 
 function App() {
+  // Log to confirm that App component is executing
+  console.log("App component is rendering");
+
   // State to store tasks
   const [tasks, setTasks] = useState(
     JSON.parse(localStorage.getItem("tasks")) || [] // Retrieve tasks from localStorage
   );
+
+  // Log the initial state
+  console.log("Initial tasks state:", tasks);
+
 
   // State for the new task input
   const [newTask, setNewTask] = useState("");
